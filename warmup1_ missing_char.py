@@ -7,10 +7,11 @@
 # not_string('not bad') → 'not bad'
 
 
-def missing_char(str, n):
-    front = str[:n]
-    return front
+def not_string(str):
+  s=str.split()        #splits 'not candy' into list as ['not','candy] i.e [s[0],s[1]]
+  if s[0]!='not':
+    return "not "+str
+  else:
+    return str
 
 
-s=missing_char('kitten',0)
-print(s)
