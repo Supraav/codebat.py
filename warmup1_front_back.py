@@ -1,12 +1,14 @@
-# Given a non-empty string and an int n, return a new string where the char at index n has been removed. 
-# The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
+
+# Given a string, return a new string where the first and last chars have been exchanged.
 
 
-# missing_char('kitten', 1) → 'ktten'
-# missing_char('kitten', 0) → 'itten'
-# missing_char('kitten', 4) → 'kittn'
+# front_back('code') → 'eodc'
+# front_back('a') → 'a'
+# front_back('ab') → 'ba'
 
 
-a= 'abcd'
-b=len(a)
-print(b)
+def front_back(str):
+  if len(str)<2:
+    return str
+  else:
+   return str[len(str)-1]+ str[1:len(str)-1]+str[0]
